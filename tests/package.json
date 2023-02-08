@@ -49,6 +49,7 @@
     "fork-test": "mocha -r ts-node/register 'fork-tests/**/test-pov*.ts'",
     "contract-simulation": "DEBUG=contract* CUSTOM_SPEC_PATH=/tmp/fork-data/moonbeam-state.mod.json BASE_PATH=/tmp/fork-data/moonbeam/para-alith ./node_modules/.bin/mocha -r ts-node/register fork-tests/test-contract*.ts",
     "zombie-test": "mocha -r ts-node/register 'zombie-tests/**/test-*.ts'",
+    "timbo-test": "npx moonwall",
     "watch": "npm-watch",
     "build": "tsc; cp -r contracts build/",
     "test-single": "mocha -r ts-node/register 'tests/test-precompile/test-precompile-proxy.ts'",

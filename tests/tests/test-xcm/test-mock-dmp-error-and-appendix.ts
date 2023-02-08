@@ -58,6 +58,8 @@ describeDevMoonbeam("Mock XCM - downward transfer with non-triggered error handl
       .clear_origin()
       .as_v2();
 
+      context.
+
     const receivedMessage: XcmVersionedXcm = context.polkadotApi.createType(
       "XcmVersionedXcm",
       xcmMessage
