@@ -1,52 +1,52 @@
 [package]
-name = "moonbeam-relay-encoder"
-authors = [ "PureStake" ]
+authors = ["PureStake"]
 edition = "2021"
 homepage = "https://moonbeam.network"
 license = "GPL-3.0-only"
+name = "moonbeam-relay-encoder"
 repository = "https://github.com/PureStake/moonbeam/"
 version = "0.1.0"
 
 [dependencies]
 
 # Moonbeam
-pallet-evm-precompile-relay-encoder = { path = "../../precompiles/relay-encoder/", default-features = false }
-xcm-primitives = { path = "../../primitives/xcm", default-features = false }
+pallet-evm-precompile-relay-encoder = {path = "../../precompiles/relay-encoder/", default-features = false}
+xcm-primitives = {path = "../../primitives/xcm", default-features = false}
 
 # Substrate
-frame-system = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37", default-features = false }
-pallet-staking = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37", default-features = false }
-parity-scale-codec = { version = "3.0.0", default-features = false, features = [ "derive" ] }
-sp-runtime = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37", default-features = false }
-sp-std = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37", default-features = false }
+frame-system = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false}
+pallet-staking = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false}
+parity-scale-codec = {version = "3.0.0", default-features = false, features = ["derive"]}
+sp-runtime = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false}
+sp-std = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37", default-features = false}
 
 # Cumulus
-cumulus-primitives-core = { git = "https://github.com/purestake/cumulus", branch = "moonbeam-polkadot-v0.9.37", default-features = false }
+cumulus-primitives-core = {git = "https://github.com/paritytech/cumulus", branch = "polkadot-v0.9.37", default-features = false}
 
 # Polkadot
-xcm = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.37", default-features = false }
+xcm = {git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37", default-features = false}
 
 [dev-dependencies]
-frame-support = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37" }
-pallet-proxy = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37" }
-pallet-utility = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.37" }
+frame-support = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37"}
+pallet-proxy = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37"}
+pallet-utility = {git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.37"}
 
-kusama-runtime = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-runtime = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-runtime-parachains = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-rococo-runtime = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-westend-runtime = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+kusama-runtime = {git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37"}
+polkadot-runtime = {git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37"}
+polkadot-runtime-parachains = {git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37"}
+rococo-runtime = {git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37"}
+westend-runtime = {git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.37"}
 
 [features]
-default = [ "std" ]
+default = ["std"]
 std = [
-	"cumulus-primitives-core/std",
-	"frame-system/std",
-	"pallet-evm-precompile-relay-encoder/std",
-	"pallet-staking/std",
-	"parity-scale-codec/std",
-	"parity-scale-codec/std",
-	"sp-runtime/std",
-	"sp-std/std",
-	"xcm-primitives/std",
+  "cumulus-primitives-core/std",
+  "frame-system/std",
+  "pallet-evm-precompile-relay-encoder/std",
+  "pallet-staking/std",
+  "parity-scale-codec/std",
+  "parity-scale-codec/std",
+  "sp-runtime/std",
+  "sp-std/std",
+  "xcm-primitives/std",
 ]
